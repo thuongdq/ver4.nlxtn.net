@@ -1,0 +1,73 @@
+.menu-top {
+    margin-bottom: 4px;
+    display: table;
+    background: #fff;
+    @include border(0px, 1px solid #a0bcf5, 1px solid #a0bcf5, 1px solid #a0bcf5);
+    @include border-radius(0px, 0px, 4px, 4px);
+    .container-fluid {
+        padding: 0px;
+        .navbar-header {
+            button {
+                margin: 0px;
+                border: 0px;
+                width: 98%;
+                .sr-only {
+                    display: block;
+                    color: #777;
+                    clip: auto;
+                    overflow: visible;
+                    font-weight: 700;
+                    font-size: 16.5px;
+                    width: 95%;
+                    margin-top: -5px;
+                }
+            }
+        }
+        .navbar-collapse {
+            // padding-left: 9px;
+            margin: 0px -15px;
+            &>.nav {
+                border: 1px solid #a0bcf5;
+                background: #fff;
+                border-radius: 4px;
+                .caret {
+                    margin: 2px 15px 0 0;
+                    // display: none;
+                }
+                &>li {
+                    &.open>a {
+                        background: none;
+                    }
+                    &:hover,
+                    &:focus {
+                        background: none;
+                    }
+                    &>a {
+                        padding: 0px;
+                        font-size: 16px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        display: block;
+                        color: #3b5998;
+                        line-height: 31px;
+                    }
+                    &:first-child {
+                        @include border-radius(4px, 0px, 4px, 0px);
+                    }
+                    &:last-child {
+                        @include border-radius( 0px, 4px, 0px, 4px);
+                    }
+                }
+                &:last-child {
+                    border-right: 0px;
+                    li {
+                        border-radius: 2px;
+                        a {
+                            margin: 0px 10px;
+                            ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

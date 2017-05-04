@@ -1,0 +1,64 @@
+.post-hot {
+    border: 0px;
+    margin-bottom: 5px;
+    padding: 0px;
+    border: 1px solid #9cb9f5;
+    &:last-child {
+        margin-bottom: 0px;
+    }
+    .panel-heading {
+        padding: 0px;
+        border-bottom: 0px;
+        @extend %title_box;
+    }
+    .panel-body {
+        padding: 0px;
+        ul {
+            margin: 0px;
+            list-style: none;
+            padding: 10px 29px;
+            li {
+                display: table;
+                width: 100%;
+                border-bottom: 1px dashed #c5d8ff;
+                padding: 9px 0px;
+                &:first-child {
+                    padding-top: 0px;
+                }
+                &:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0px;
+                }
+                a {
+                    position: relative;
+                    padding: 0;
+                    display: block !important;
+                    &:first-child {
+                        width: 23.2%;
+                        display: block;
+                        float: left;
+                        border-radius: 4px;
+                        img {
+                            max-width: none;
+                            margin-right: 5px;
+                            padding: 0 !important;
+                            border: 0 !important;
+                            border-radius: 3px;
+                            height: 37px;
+                            width: 100%;
+                        }
+                    }
+                    &:last-child {
+                        font-size: 14px;
+                        line-height: 18px;
+                        padding-left: 5px;
+                        width: 76.8%;
+                        display: block;
+                        float: left;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+}

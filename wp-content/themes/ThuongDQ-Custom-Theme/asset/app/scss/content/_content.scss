@@ -1,0 +1,16 @@
+/* content.scss */
+
+.content {
+    padding: 0px;
+    position: relative;
+    float: left;
+    @import "category";
+    @import "post-special";
+    @import "product";
+    @import "../right/post-hot";
+    @import 'extend';
+}
+
+@import "page-detail";
+@import "page-category";
+@import "page-agency";

@@ -1,0 +1,43 @@
+.menu {
+    @extend %box;
+    .slogan {
+        font: 300 24px/24px Arial;
+        padding: 6px 0 6px 5px;
+        display: inline-block;
+    }
+    .panel-heading {
+        border-radius: 0;
+        background-color: #d4dbe8;
+        border-left: 5px solid #3b5998;
+        border-bottom: none;
+        padding: 0px 0px 0px 5px;
+        margin-bottom: 5px;
+        .title {
+            color: #000;
+            font-weight: bolder;
+            text-align: left;
+            line-height: 31px;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+    .panel-body {
+        padding: 0px;
+        .nav-left> {
+            li {
+                &>a {
+                    display: block;
+                    padding: 2px 0px 2px 5px;
+                    color: #000;
+                    font-weight: bold;
+                    font-size: 13px;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                &.current-menu-item>a {
+                    color: #4080ff;
+                }
+            }
+        }
+    }
+}

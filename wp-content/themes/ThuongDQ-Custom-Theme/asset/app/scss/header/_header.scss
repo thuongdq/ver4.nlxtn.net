@@ -1,0 +1,10 @@
+header {
+    &.page-header {
+        margin-top: 4px;
+        margin-bottom: 0px;
+        padding: 0px;
+        border: none;
+    }
+    @import 'logo';
+    @import 'banner';
+}

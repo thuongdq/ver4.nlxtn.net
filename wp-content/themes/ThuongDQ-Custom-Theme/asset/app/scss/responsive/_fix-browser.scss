@@ -1,0 +1,41 @@
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .content {
+        .product {
+            .panel-body {
+                padding: 9px;
+                .item {
+                    &>a {
+                        &:nth-child(2) {
+                            margin: 5px 0px !important;
+                        }
+                    }
+                }
+            }
+        }
+        .post-hot {
+            .panel-body {
+                ul {
+                    li {
+                        padding: 10.47px 5px!important;
+                    }
+                }
+            }
+        }
+    }
+    .right {
+        .post-hot {
+            .panel-body {
+                ul {
+                    li {
+                        padding: 8.5px 0;
+                    }
+                }
+            }
+        }
+        .support {
+            .textwidget {
+                padding: 10px 19px 10px 19px;
+            }
+        }
+    }
+}

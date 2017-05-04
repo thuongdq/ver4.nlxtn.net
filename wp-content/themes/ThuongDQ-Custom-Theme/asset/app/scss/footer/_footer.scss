@@ -1,0 +1,26 @@
+footer {
+    margin-top: -5px;
+    .panel {
+        margin-bottom: 4px;
+        border: 1px solid #9cb9f5;
+        .panel-heading {
+            padding: 0px;
+            border-bottom: 0px;
+            @extend %title_box;
+            h2 {
+                line-height: 36px;
+                display: block;
+            }
+        }
+        .panel-body {
+            border-bottom: 14px solid #d4dbe8;
+            padding: 10px 0px;
+            a {
+                color: #4080ff;
+            }
+            p {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

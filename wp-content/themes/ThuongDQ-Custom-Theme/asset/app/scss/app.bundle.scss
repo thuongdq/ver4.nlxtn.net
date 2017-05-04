@@ -1,0 +1,210 @@
+@import "bootstrap";
+@import "library/jquery.smartmenus.bootstrap";
+// main.scss
+body {
+    background-color: #eee;
+}
+
+a {
+    color: black;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        background: none;
+    }
+}
+
+$url_icon:"../img/icon.png";
+@mixin box($border, $border-radius, $padding) {
+    border: $border;
+    border-radius: $border-radius;
+    padding: $padding;
+}
+
+@mixin border($top, $right, $bottom, $left) {
+    border-top: $top;
+    border-right: $right;
+    border-bottom: $bottom;
+    border-left: $left;
+}
+
+@mixin border-radius($top-left, $top-right, $bottom-left, $bottom-right) {
+    border-top-left-radius: $top-left;
+    border-top-right-radius: $top-right;
+    border-bottom-left-radius: $bottom-left;
+    border-bottom-right-radius: $bottom-right;
+}
+
+@mixin background-before( $width, $url, $repeat, $coordinates) {
+    padding-left: $width;
+    @include background($url, $repeat, $coordinates);
+}
+
+@mixin background($url, $repeat, $coordinates) {
+    background: url($url) $repeat $coordinates;
+}
+
+@mixin background_nested($url, $before, $after, $between, $between_repeat) {
+    background: url($url) no-repeat 0px $before, url($url) 100% $after no-repeat, url($url) $between $between_repeat;
+}
+
+@mixin gradient($linear, $linear-to, $from, $between, $between-percent, $to) {
+    background: $from;
+    background: -moz-linear-gradient($linear, $from 0%, $between $between-percent, $to 100%);
+    background: -webkit-gradient($linear top, right top, color-stop(0%, $from), color-stop($between-percent, $between), color-stop(100%, $to));
+    background: -webkit-linear-gradient($linear, $from 0%, $between $between-percent, $to 100%);
+    background: -o-linear-gradient($linear, $from 0%, $between $between-percent, $to 100%);
+    background: -ms-linear-gradient($linear, $from 0%, $between $between-percent, $to 100%);
+    background: linear-gradient($linear-to, $from 0%, $between $between-percent, $to 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+}
+
+%title_box {
+    margin: 0px;
+    text-align: center;
+    color: #3b5998;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 25px;
+    background-color: #d4dbe8;
+    border-bottom: 1px solid #aec6f7;
+    @include border-radius(2px, 2px, 0px, 0px);
+}
+
+%title_box_content {
+    background-color: #3b5998;
+    color: #fff;
+    font-weight: bolder;
+    text-align: left;
+    font-size: 16px;
+    padding: 3px 0px 0px 10px;
+    border-bottom: 1px solid #48649f;
+}
+
+%box {
+    margin-bottom: 5px;
+    border: 1px solid #aec6f7;
+    border-radius: 4px;
+}
+
+%breadcrumb {
+    @extend %title_box_content;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 4px;
+    a {
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .home {
+        display: inline-block;
+        text-indent: -9999px;
+        width: 16px;
+        @include background($url_icon, no-repeat, -249px -52px);
+    }
+    .breadcrumb_last {
+        color: #8fcd44;
+    }
+}
+
+%connect {
+    overflow: hidden;
+    border-top: 1px solid #a0bcf5;
+    padding: 5px 0 5px;
+    width: 100%;
+    a {
+        float: left;
+        padding-right: 10px;
+        font-size: 14px;
+        color: #5d7cbc;
+        font-family: Arial, Helvetica, sans-serif;
+        &.in-fb {
+            @include background($url_icon, no-repeat, -2px 1px);
+            padding-left: 20px;
+        }
+        &.watch-video {
+            @include background($url_icon, no-repeat, -2px -18px);
+            padding-left: 20px;
+        }
+        &.search-agency {
+            @include background($url_icon, no-repeat, -2px -39px);
+            padding-left: 20px;
+        }
+        &.contact-company {
+            @include background($url_icon, no-repeat, -2px -60px);
+            padding-left: 20px;
+        }
+    }
+}
+
+%price {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4080ff;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.title_agency_global {
+    font-size: 20px;
+    text-decoration: underline;
+    text-align: center;
+    color: #3b5998;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+%list-agency {
+    @extend %box;
+    .panel-heading {
+        padding: 0px;
+        border-bottom: 0px;
+        @extend %title_box;
+        font-size: 16px;
+        color: #000;
+    }
+    .panel-body {
+        padding: 0px;
+        ul {
+            li {
+                @include border(1px dotted #bdd3ff, 1px dotted #bdd3ff, 0px, 0px);
+                list-style-type: none;
+                width: 33.3333%;
+                float: left;
+                text-align: left;
+                margin-top: 1px;
+                height: 26px;
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3) {
+                    border-top: none;
+                }
+                &:nth-child(3n+3) {
+                    border-right: none;
+                }
+                a {
+                    font-size: 14px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    line-height: 26px;
+                    display: block;
+                    padding: 0px 0px 0px 30%;
+                }
+            }
+        }
+    }
+}
+
+@import "header/header";
+@import "menu/menu-top";
+@import "left/left";
+@import "content/content";
+@import "right/right";
+@import "footer/footer";
+@import "responsive/responsive";

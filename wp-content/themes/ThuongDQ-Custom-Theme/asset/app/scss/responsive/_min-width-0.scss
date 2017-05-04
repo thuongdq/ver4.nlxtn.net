@@ -1,0 +1,108 @@
+@media (min-width: 0px) {
+    header {
+        .logo {
+            display: none;
+        }
+        .banner {
+            width: 100%;
+            margin-left: 0px;
+            img {
+                height: auto;
+            }
+        }
+    }
+    .page-content {
+        position: relative;
+        display: inline-block;
+        .left {
+            width: 100%;
+            position: relative;
+            float: left;
+        }
+        .content {
+            width: 100%;
+            margin-left: 0px;
+            .post-special {
+                .panel-body {
+                    ul {
+                        li {
+                            &:nth-child(5),
+                            &:nth-child(6) {
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .product {
+                .item {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    &:first-child,
+                    &:nth-child(2) {
+                        margin-right: 0px;
+                        float: left
+                    }
+                    &>a {
+                        &:first-child {
+                            width: 100%;
+                            img {
+                                height: auto;
+                            }
+                        }
+                        &:nth-child(2) {
+                            width: 100%;
+                            margin: 0px;
+                        }
+                    }
+                    .desc {
+                        width: 100%;
+                        margin: 0px;
+                    }
+                }
+            }
+        }
+        .right {
+            display: none;
+        }
+    }
+    .menu-top {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        padding: 0px;
+        .container-fluid {
+            .navbar-collapse {
+                &>.nav {
+                    border: none;
+                    &>li {
+                        border: none;
+                        a {
+                            padding: 0px 10px;
+                        }
+                        .dropdown-menu {
+                            li {
+                                a {
+                                    padding: 5px 0px 5px 30px;
+                                }
+                            }
+                        }
+                    }
+                    &:first-child {
+                        margin: 0px 0px 0px 8px;
+                    }
+                    &:last-child {
+                        margin: 0px 8px 0px 0px;
+                        li {
+                            background: none;
+                            &>a {
+                                border-radius: 4px;
+                                color: #3b5998;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

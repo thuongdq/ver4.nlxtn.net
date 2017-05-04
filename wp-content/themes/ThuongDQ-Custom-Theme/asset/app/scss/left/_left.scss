@@ -1,0 +1,16 @@
+.left {
+    padding: 0px;
+    margin-top: 4px;
+    @import 'menu';
+    @import 'agency';
+    @import "../right/support";
+    @import 'extend';
+    // padding: 0px;
+    // @import "../right/search";
+    // 
+    // @import 'support';
+    // 
+    // @import "../right/video";
+    // @import "../right/certificate";
+    // @import 'extend';
+}

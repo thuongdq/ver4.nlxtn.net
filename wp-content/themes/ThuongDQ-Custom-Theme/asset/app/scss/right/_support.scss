@@ -1,0 +1,74 @@
+.support {
+    @extend %box;
+    background: #fff;
+    h2 {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        @extend %title_box;
+        line-height: 32px;
+    }
+    .textwidget {
+        position: relative;
+        padding: 9px 19px 9px 19px;
+        font-size: 13px;
+        a {
+            color: #3b5998;
+        }
+        p {
+            &:nth-child(4),
+            &:nth-child(5) {
+                border-bottom: 1px dashed #c5d8ff;
+                padding-bottom: 3px;
+                padding-bottom: 8px;
+                padding-top: 7.5px;
+            }
+            margin-bottom: 0;
+            &:last-child {
+                margin-bottom: 1px;
+                text-align: center;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .nam-company,
+        .nhan-tin,
+        .map {
+            color: #3b5998;
+            font-weight: bold;
+        }
+        .call-support {
+            text-align: center;
+        }
+        .map {
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .t-phone {
+            width: 100%;
+            text-align: center;
+            padding: 5px 0;
+        }
+        .phone {
+            display: inline-block;
+            // background: url(../img/icon.png) no-repeat -196px 8px;
+            @include background($url_icon, no-repeat, -196px 8px);
+            padding-left: 81px;
+            color: #f90202;
+            font-weight: 700;
+            padding-top: 0;
+            padding-bottom: 0;
+            line-height: 33px;
+            font-size: 16px;
+            span {
+                display: block;
+            }
+        }
+        .address-company {
+            font-size: 13px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}

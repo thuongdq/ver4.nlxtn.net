@@ -1,0 +1,24 @@
+@media (min-width: 450px) {
+    .page-content {
+        .content {
+            .product {
+                .item {
+                    &>a {
+                        &:first-child {
+                            width: 30%;
+                        }
+                        &:nth-child(2) {
+                            margin-left: 10px;
+                            width: calc(70% - 10px);
+                        }
+                    }
+                    .desc {
+                        float: left;
+                        margin-left: 10px;
+                        width: calc(70% - 10px);
+                    }
+                }
+            }
+        }
+    }
+}

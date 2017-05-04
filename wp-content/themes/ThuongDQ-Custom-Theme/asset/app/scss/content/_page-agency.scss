@@ -1,0 +1,32 @@
+.content.page-agency {
+    .breadcrumbs {
+        @extend %breadcrumb;
+    }
+    .info {
+        @extend %box;
+        background: #fff;
+        padding: 9px 9px 0px 9px;
+        &>h1 {
+            font-size: 16px;
+            margin: 0px 0px 9px 0px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .intro {
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .content-agency {
+            font-size: 14px;
+            line-height: 18px;
+            p {
+                margin: 5px 0px;
+            }
+            .list-agency {
+                @extend %list-agency;
+            }
+        }
+    }
+}

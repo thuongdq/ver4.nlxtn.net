@@ -1,0 +1,9 @@
+.right {
+    padding: 0px;
+    float: right;
+    display: block;
+    @import "support";
+    @import "video";
+    @import "post-hot";
+    @import "extend";
+}

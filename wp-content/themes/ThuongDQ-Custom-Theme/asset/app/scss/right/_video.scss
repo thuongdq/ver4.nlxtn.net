@@ -1,0 +1,59 @@
+.video {
+    &>h2 {
+        border: none;
+        background-color: #3b5998 !important;
+        width: 100%;
+        margin: 0px 0px 5px 0px;
+        color: #fff;
+        font-size: 16px;
+        line-height: 32px;
+        padding: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        &:hover {
+            background-color: #337ab7 !important;
+        }
+    }
+    .widget {
+        @extend %box;
+        h2 {
+            @extend %title_box;
+        }
+        a {
+            position: relative;
+            display: block;
+            width: calc(100%-3px);
+            margin: 0px -1px;
+            background: #000;
+            text-align: center;
+            @include border(0px, 1px solid #404040, 0px, 1px solid #404040);
+            margin-bottom: 18px;
+            img {
+                width: 80%;
+                height: 146px;
+            }
+            &::after {
+                content: "";
+                width: 38px;
+                height: 36px;
+                position: absolute;
+                z-index: 99;
+                // background: url(../img/icon.png) no-repeat 1px -88px;
+                @include background($url_icon, no-repeat, 1px -88px);
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+            }
+            &::before {
+                content: "";
+                width: 100%;
+                height: 16px;
+                position: absolute;
+                z-index: 99;
+                // background: url(../img/icon.png) no-repeat 1px -133px;
+                @include background($url_icon, no-repeat, 1px -133px);
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@media (min-width: 992px) {
+    header {
+        .logo {
+            width: 18%;
+            display: block;
+        }
+        .banner {
+            width: calc(82% - 10px);
+            margin-left: 10px;
+        }
+    }
+    .page-content {
+        .left {
+            width: 18%;
+            float: left;
+            .menu-left-agency {
+                .panel-body {
+                    .menu-agency {
+                        li {
+                            padding: 0px 0px 0px 3px;
+                        }
+                    }
+                }
+            }
+        }
+        .main {
+            padding: 0;
+            margin-left: 10px;
+            width: calc(82% - 10px);
+            left: 18%;
+            display: block;
+            float: right;
+            .content {
+                width: calc( 67% - 10px);
+                margin-right: 10px;
+                float: left;
+            }
+            .right {
+                float: right;
+                width: 33%;
+                display: block;
+                .video {
+                    .widget {
+                        a {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+            .menu-top {
+                width: 100%;
+                .container-fluid {
+                    .navbar-collapse {
+                        &>.nav {
+                            &>li {
+                                a {
+                                    padding: 0px 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

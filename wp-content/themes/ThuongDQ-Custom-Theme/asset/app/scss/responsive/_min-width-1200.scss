@@ -1,0 +1,32 @@
+    @media (min-width: 1200px) {
+        .container {
+            width: 1007px;
+        }
+        .page-content {
+            .main {
+                .left {
+                    width: 18%;
+                    float: left;
+                    .menu-left-agency {
+                        .panel-body {
+                            .menu-agency {
+                                li {
+                                    padding: 0px 0px 0px 3px;
+                                    ;
+                                }
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .video {
+                        .widget {
+                            a {
+                                margin-bottom: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

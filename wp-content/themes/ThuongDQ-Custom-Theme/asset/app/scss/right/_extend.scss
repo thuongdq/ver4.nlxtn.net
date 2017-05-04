@@ -1,0 +1,15 @@
+.post-hot {
+    .panel-body {
+        ul {
+            li {
+                &:nth-child(5) {
+                    padding-bottom: 0px;
+                    border-bottom: none;
+                }
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}
