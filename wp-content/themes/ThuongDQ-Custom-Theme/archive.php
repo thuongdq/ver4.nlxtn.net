@@ -19,17 +19,13 @@
         </a>
         <div class="info">
            <a  href="<?php echo esc_url( get_permalink()) ?>" title="<?php echo get_the_title()?>">
-                <!-- .post-thumbnail -->
-                <?php if ( '' !== get_the_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail( 'image' ); ?>
-                <?php else : ?> 
-                    <img src="<?php echo get_path_image_first_content_post()?>" alt="<?php echo get_the_title()?>">
-                <?php endif; ?>
-                <!-- .post-thumbnail -->
+                 <?php
+                echo image_view(get_the_ID(), get_the_title(), get_the_content(),'thumbnail');
+                ?>
             </a>
              <div class="intro">
                 <?php
-                echo sub_excerpt(get_the_content(),220);       
+                echo post_sub_excerpt(get_the_content(),220);       
                 ?>
                  <a  href="<?php echo esc_url( get_permalink()) ?>" title="<?php echo get_the_title()?>" class="pull-right btn btn-primary read-more" >Xem thêm</a>
             </div>

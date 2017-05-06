@@ -23,17 +23,11 @@ foreach($tp_options['home-categories'] as $key => $category) {
     <div class="main-view">
         <a title="<?php echo $list_post[0]->post_title;?>" href="<?php echo get_permalink($list_post[0]->ID); ?>">
             <?php
-            $image = get_the_post_thumbnail($list_post[0]->ID, 'thumbnail', array( 'class' => 'img-responsive' ));
-            if($image == ''){
-                $image = ' 
-                    <img src="'.get_path_image_first_content_post('thumbnail', $list_post[0]->post_content).'" class="img-responsive" alt="">
-                ';                                   
-            }
-            echo $image;
+            echo image_view($list_post[0]->ID, $list_post[0]->post_title, $list_post[0]->post_content,'thumbnail');
             ?>
         </a>
         <div class="info">
-            <?php echo sub_excerpt($list_post[0]->post_content, 220) ?>    
+            <?php echo post_sub_excerpt($list_post[0]->post_content, 220) ?>    
             <a title="<?php echo $list_post[0]->post_title;?>" href="<?php echo get_permalink($list_post[0]->ID); ?>" class="pull-right btn btn-primary read-more" >Xem thêm</a>
         </div>
     </div>

@@ -12,7 +12,7 @@
     <?php 
     if (have_posts()) { 
         while (have_posts()) : the_post(); 
-        setPostViews(get_the_ID());
+        post_set_views(get_the_ID());
         ?>
         <h1><?php the_title(); ?></h1>
         <div class="detail">

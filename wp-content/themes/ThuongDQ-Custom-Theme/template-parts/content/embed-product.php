@@ -15,13 +15,7 @@ $list_product = get_posts( $args ); ?>
         <div class="col-md-4 item">
             <a href="<?php echo get_permalink($list_product[1]->ID); ?>" title="<?php echo $list_product[1]->post_title;?>">
                 <?php
-                    $image = get_the_post_thumbnail($list_product[$i]->ID, 'thumbnail', array( 'class' => 'img-responsive' ));
-                    if($image == ''){
-                        $image = ' 
-                            <img src="'.get_path_image_first_content_post('thumbnail', $list_product[$i]->post_content).'" class="img-responsive" alt="">
-                        ';                                   
-                    }
-                    echo $image;
+                echo image_view($list_product[$i]->ID, $list_product[$i]->post_title, $list_product[$i]->post_content,'thumbnail');
                 ?>
             </a>
             <a href="<?php echo get_permalink($list_product[1]->ID); ?>" title="<?php echo $list_product[1]->post_title;?>">

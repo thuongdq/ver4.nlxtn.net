@@ -1,3 +1,3 @@
 <nav aria-label="...">
-	<?php custom_pagination(); ?>
+	<?php category_custom_pagination(); ?>
 </nav>
