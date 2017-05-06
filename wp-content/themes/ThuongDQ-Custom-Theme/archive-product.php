@@ -20,7 +20,7 @@
         <div class="info">
            <a  href="<?php echo esc_url( get_permalink()) ?>" title="<?php echo get_the_title()?>">
                 <?php
-                echo image_view(get_the_ID(), get_the_title(), get_the_content(),'thumbnail');
+                echo media_view_image(get_the_ID(), get_the_title(), get_the_content(),'thumbnail');
                 ?>
             </a>
              <div class="intro">

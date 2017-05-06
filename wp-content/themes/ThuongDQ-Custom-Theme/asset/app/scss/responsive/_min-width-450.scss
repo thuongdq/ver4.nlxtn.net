@@ -8,7 +8,7 @@
                             width: 30%;
                         }
                         &:nth-child(2) {
-                            margin-left: 10px;
+                            margin-left: 10px !important;
                             width: calc(70% - 10px);
                         }
                     }

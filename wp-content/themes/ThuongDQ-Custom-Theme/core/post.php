@@ -8,7 +8,7 @@ function posts_column_views($defaults){
 }
 function posts_custom_column_views($column_name, $id){
     if($column_name === 'post_views'){
-        echo getPostViews(get_the_ID());
+        echo post_get_views(get_the_ID());
     }
 }
 

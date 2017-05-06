@@ -5,8 +5,11 @@
                 padding: 9px;
                 .item {
                     &>a {
+                        &:nth-child(1) {
+                            margin-bottom: 5px !important;
+                        }
                         &:nth-child(2) {
-                            margin: 5px 0px !important;
+                            margin: 0px 0px 5px 0px !important;
                         }
                     }
                 }

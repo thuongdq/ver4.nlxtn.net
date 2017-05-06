@@ -15,15 +15,9 @@
         ));
         ?>
         <h2>VIDEO</h2>
-        <a class="cat-post-thumbnail cat-post-none" href="#" title="video nấm lim xanh">
+        <a class="cat-post-thumbnail cat-post-none" href="<?php echo get_post_permalink($list_video[0]->ID); ?>" title="video nấm lim xanh">
             <?php
-            $image = get_the_post_thumbnail($list_video[0]->ID, 'thumbnail', array( 'class' => '' ));
-            if($image == ''){
-                $image = ' 
-                    <img src="'.get_path_image_first_content_post('thumbnail', $list_video[0]->post_content).'" class="" alt="'.$list_video[0]->post_title.'">
-                ';                                   
-            }
-            echo $image;
+            echo media_view_image($list_video[0]->ID, $list_video[0]->post_title, $list_video[0]->post_content,'medium', "");
             ?>
         </a>
     </div>

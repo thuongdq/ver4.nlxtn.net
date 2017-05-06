@@ -20,6 +20,13 @@
                                         &:nth-child(6) {
                                             border-bottom: none;
                                         }
+                                        a {
+                                            &:first-child {
+                                                img {
+                                                    height: 60px;
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -41,7 +48,7 @@
                                         }
                                     }
                                     &:nth-child(2) {
-                                        margin-left: 0px;
+                                        margin-left: 0px !important;
                                         width: 100%;
                                     }
                                 }

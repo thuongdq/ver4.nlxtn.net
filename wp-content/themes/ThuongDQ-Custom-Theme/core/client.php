@@ -21,9 +21,9 @@ add_action( 'template_redirect', 'edirect_page' );
 if ( !is_admin() ) {
     // wp_deregister_script('jquery');
     // wp_enqueue_script('jquery');
-    // // wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"), false);
-    // remove_action('wp_head', 'print_emoji_detection_script', 7);
-    // remove_action('wp_print_styles', 'print_emoji_styles');
+    // wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"), false);
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('wp_print_styles', 'print_emoji_styles');
     // function deregister_cf7_js() {
     //  if ( ! is_page( 'contact' ) ) {
     //   wp_deregister_script( 'contact-form-7' );
@@ -41,6 +41,10 @@ if ( !is_admin() ) {
     //   wp_deregister_script( 'wp-embed' );
     // }
     // add_action( 'wp_footer', 'my_deregister_scripts' );
+    function my_deregister_scripts(){
+        wp_dequeue_script( 'wp-embed' );
+    }
+    add_action( 'wp_footer', 'my_deregister_scripts' );
 }
 
 // function redirect_to_child_category($category_slugs_array){

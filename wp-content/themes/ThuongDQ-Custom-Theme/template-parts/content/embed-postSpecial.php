@@ -29,7 +29,7 @@ $list_non_sticky =  get_posts($args_non_sticky);
                     echo '
                     <li class="col-xs-6 col-sm-4">
                         <a href="'.get_permalink($post->ID).'" title="'.$post->post_title.'">
-                           '.image_view($post->ID, $post->post_title, $post->post_content,'small').'
+                           '.media_view_image($post->ID, $post->post_title, $post->post_content,'small').'
                         </a>
                         <a href="'.get_permalink($post->ID).'" title="'.$post->post_title.'">
                             '.post_sub_excerpt($post->post_title, 40).'

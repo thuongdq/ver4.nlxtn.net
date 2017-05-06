@@ -13,7 +13,7 @@ require_once( CORE . "/lib/init.php" );
 require_once( CORE . "/post.php" );
 require_once( CORE . "/category.php" );
 require_once( CORE . "/menu.php" );
-require_once( CORE . "/image.php" );
+require_once( CORE . "/media.php" );
 require_once( CORE . "/post-type.php" );
 require_once( CORE . "/admin.php" );
 require_once( CORE . "/client.php" );

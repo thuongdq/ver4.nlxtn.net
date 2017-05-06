@@ -23,7 +23,7 @@ foreach($tp_options['home-categories'] as $key => $category) {
     <div class="main-view">
         <a title="<?php echo $list_post[0]->post_title;?>" href="<?php echo get_permalink($list_post[0]->ID); ?>">
             <?php
-            echo image_view($list_post[0]->ID, $list_post[0]->post_title, $list_post[0]->post_content,'thumbnail');
+            echo media_view_image($list_post[0]->ID, $list_post[0]->post_title, $list_post[0]->post_content,'thumbnail');
             ?>
         </a>
         <div class="info">

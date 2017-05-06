@@ -20,7 +20,7 @@
             <li>
                <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title;?>">
                     <?php
-                    echo image_view($post->ID, $post->post_title, $post->post_content,'smaller');
+                    echo media_view_image($post->ID, $post->post_title, $post->post_content,'smaller');
                     ?>
                 </a>
                 <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title;?>" class="title">

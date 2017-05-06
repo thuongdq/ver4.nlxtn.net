@@ -15,7 +15,7 @@ $list_product = get_posts( $args ); ?>
         <div class="col-md-4 item">
             <a href="<?php echo get_permalink($list_product[1]->ID); ?>" title="<?php echo $list_product[1]->post_title;?>">
                 <?php
-                echo image_view($list_product[$i]->ID, $list_product[$i]->post_title, $list_product[$i]->post_content,'thumbnail');
+                echo media_view_image($list_product[$i]->ID, $list_product[$i]->post_title, $list_product[$i]->post_content,'thumbnail');
                 ?>
             </a>
             <a href="<?php echo get_permalink($list_product[1]->ID); ?>" title="<?php echo $list_product[1]->post_title;?>">

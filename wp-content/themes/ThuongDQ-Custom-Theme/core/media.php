@@ -5,13 +5,13 @@ add_image_size('small',68,60, true);
 add_image_size('smaller',48,37, true);
 
 //get path thumbnail by post id
-function image_get_path_from_post_id($post_id, $size ="thumbnail", $icon = ""){
+function media_get_path_image_from_post_id($post_id, $size ="thumbnail", $icon = ""){
   $post_thumbnail_url = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), $size,  $icon);
   return $post_thumbnail_url[0];
 }
 
 // get path thumbnail first in content post
-function image_get_path_first_content_post($post_content = '', $size='thumbnail'){
+function media_get_path_image_first_content_post($post_content = '', $size='thumbnail'){
   global $post, $posts;
   $content = $post->post_content;
   if($post_content != ''){
@@ -41,10 +41,10 @@ function image_get_path_first_content_post($post_content = '', $size='thumbnail'
   }
 }
 
-function image_get_path($post_id, $post_content = "", $size ="thumbnail"){
-  $image_src = image_get_path_from_post_id($post_id, $size);
+function media_get_path_image_final($post_id, $post_content = "", $size ="thumbnail"){
+  $image_src = media_get_path_image_from_post_id($post_id, $size);
   if($image_src == ""){
-    $image_src = image_get_path_first_content_post( $post_content, $size);
+    $image_src = media_get_path_image_first_content_post( $post_content, $size);
     if($image_src == ""){
       $image_src = get_template_directory_uri()."/asset/app/img/no-image.png";
     }
@@ -53,8 +53,8 @@ function image_get_path($post_id, $post_content = "", $size ="thumbnail"){
 }
 
 
-function image_view($post_id,$post_title = "", $post_content ="", $size="thumbnail", $class ="img-responsive", $attribute = "", $lazyload = false){
-  $image_src = image_get_path($post_id, $post_content, $size);
+function media_view_image($post_id,$post_title = "", $post_content ="", $size="thumbnail", $class ="img-responsive", $attribute = "", $lazyload = false){
+  $image_src = media_get_path_image_final($post_id, $post_content, $size);
   if($lazyload){
     return '
       <img data-original="'.$image_src.'" class="'.$class.'" '.$attribute.' alt="'.$post_title.'"/>

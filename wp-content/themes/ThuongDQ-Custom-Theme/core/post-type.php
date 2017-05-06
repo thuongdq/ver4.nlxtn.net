@@ -42,24 +42,24 @@ function post_type_create()
 // Custom Post type đại lý
 function post_type_agency_create()
 {
-    register_taxonomy_for_object_type('category', 'twentyseventeen');
-    register_taxonomy_for_object_type('post_tag', 'twentyseventeen');
+    register_taxonomy_for_object_type('category', 'ThuongDQ Custom Theme');
+    register_taxonomy_for_object_type('post_tag', 'ThuongDQ Custom Theme');
     register_post_type('agency',
     array(
     
     'labels' => array(
-    'name' => __('Đại lý', 'twentyseventeen'),
-    'singular_name' => __('Đại lý', 'twentyseventeen'),
-    'add_new' => __('Add New đại lý', 'twentyseventeen'),
-    'add_new_item' => __('Add New đại lý', 'twentyseventeen'),
-    'edit' => __('Edit đại lý', 'twentyseventeen'),
-    'edit_item' => __('Edit đại lý', 'twentyseventeen'),
-    'new_item' => __('New đại lý', 'twentyseventeen'),
-    'view' => __('View đại lý', 'twentyseventeen'),
-    'view_item' => __('View đại lý', 'twentyseventeen'),
-    'search_items' => __('Search đại lý', 'twentyseventeen'),
-    'not_found' => __('No đại lý', 'twentyseventeen'),
-    'not_found_in_trash' => __('No đại lý in Trash', 'twentyseventeen')
+    'name' => __('Đại lý', 'ThuongDQ Custom Theme'),
+    'singular_name' => __('Đại lý', 'ThuongDQ Custom Theme'),
+    'add_new' => __('Thêm đại lý mới', 'ThuongDQ Custom Theme'),
+    'add_new_item' => __('Thêm đại lý mới', 'ThuongDQ Custom Theme'),
+    'edit' => __('Chỉnh sửa đại lý', 'ThuongDQ Custom Theme'),
+    'edit_item' => __('Chỉnh sửa đại lý', 'ThuongDQ Custom Theme'),
+    'new_item' => __('Đại lý mới', 'ThuongDQ Custom Theme'),
+    'view' => __('Xem đại lý', 'ThuongDQ Custom Theme'),
+    'view_item' => __('Xem đại lý', 'ThuongDQ Custom Theme'),
+    'search_items' => __('Tìm kiếm đại lý', 'ThuongDQ Custom Theme'),
+    'not_found' => __('Không có đại lý', 'ThuongDQ Custom Theme'),
+    'not_found_in_trash' => __('Không có đại lý trong thùng rác', 'ThuongDQ Custom Theme')
     ),
     'rewrite' => array( 'slug' => 'dai-ly'),
     'public' => true,
@@ -81,23 +81,23 @@ add_action('init', 'post_type_agency_create');
 
 // Custom Post type sản phẩm
 function post_type_product_create(){
-    register_taxonomy_for_object_type('category', 'twentyseventeen');
-    register_taxonomy_for_object_type('post_tag', 'twentyseventeen');
+    register_taxonomy_for_object_type('category', 'ThuongDQ Custom Theme');
+    register_taxonomy_for_object_type('post_tag', 'ThuongDQ Custom Theme');
     register_post_type('product',
     array(
     'labels' => array(
-    'name' => __('Sản phẩm', 'twentyseventeen'),
-    'singular_name' => __('Sản phẩm', 'twentyseventeen'),
-    'add_new' => __('Add New sản phẩm', 'twentyseventeen'),
-    'add_new_item' => __('Add New sản phẩm', 'twentyseventeen'),
-    'edit' => __('Edit sản phẩm', 'twentyseventeen'),
-    'edit_item' => __('Edit sản phẩm', 'twentyseventeen'),
-    'new_item' => __('New sản phẩm', 'twentyseventeen'),
-    'view' => __('View sản phẩm', 'twentyseventeen'),
-    'view_item' => __('View sản phẩm', 'twentyseventeen'),
-    'search_items' => __('Search sản phẩm', 'twentyseventeen'),
-    'not_found' => __('No sản phẩm', 'twentyseventeen'),
-    'not_found_in_trash' => __('No sản phẩm in Trash', 'twentyseventeen')
+    'name' => __('Sản phẩm', 'ThuongDQ Custom Theme'),
+    'singular_name' => __('Sản phẩm', 'ThuongDQ Custom Theme'),
+    'add_new' => __('Thêm sản phẩm mới', 'ThuongDQ Custom Theme'),
+    'add_new_item' => __('Thêm sản phẩm mới', 'ThuongDQ Custom Theme'),
+    'edit' => __('Chỉnh sửa sản phẩm', 'ThuongDQ Custom Theme'),
+    'edit_item' => __('Chỉnh sửa sản phẩm', 'ThuongDQ Custom Theme'),
+    'new_item' => __('Sản phẩm mới', 'ThuongDQ Custom Theme'),
+    'view' => __('Xem sản phẩm', 'ThuongDQ Custom Theme'),
+    'view_item' => __('Xem sản phẩm', 'ThuongDQ Custom Theme'),
+    'search_items' => __('Tìm kiếm sản phẩm', 'ThuongDQ Custom Theme'),
+    'not_found' => __('Không có sản phẩm', 'ThuongDQ Custom Theme'),
+    'not_found_in_trash' => __('Không có sản phẩm trong thùng rác', 'ThuongDQ Custom Theme')
     ),
     'rewrite' => array( 'slug' => 'san-pham'),
     'public' => true,

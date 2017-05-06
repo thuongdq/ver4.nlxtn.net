@@ -30,6 +30,14 @@
                             &:nth-child(6) {
                                 border-bottom: none;
                             }
+                            a {
+                                &:first-child {
+                                    img {
+                                        width: 69px;
+                                        height: 60px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }

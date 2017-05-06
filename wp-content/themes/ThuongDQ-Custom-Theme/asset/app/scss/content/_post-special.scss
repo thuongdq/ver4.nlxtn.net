@@ -23,16 +23,16 @@
                         background: none;
                     }
                     &:first-child {
-                        width: 41.5%;
+                        width: 69px;
                         img {
                             border: 1px solid #b6c0d4;
                             border-radius: 4px;
-                            width: 100%;
+                            width: 69px;
                             height: 60px;
                         }
                     }
                     &:last-child {
-                        width: calc(58.5% - 7px);
+                        width: calc(100% - 7px - 69px);
                         margin-left: 7px;
                         font-size: 13px;
                         line-height: 15px;

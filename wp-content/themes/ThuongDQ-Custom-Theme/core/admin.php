@@ -113,3 +113,23 @@ add_filter( 'update_footer', 'change_footer_version', 9999);
 //     }
 // }
 // add_action( 'admin_menu', 'my_footer_shh' );
+
+
+function add_submenu_item() { 
+ // Resource page: http://clivern.com/adding-menus-and-submenus-for-wordpress-plugins/
+ // add_options_page($page_title, $menu_title, $capability, $menu_slug, $function);
+ 
+ add_dashboard_page('page-title', 'submenu title', 'manage_options', 'upload.php');
+ add_posts_page('page-title', 'submenu title', 'manage_options', 'upload.php');
+ add_media_page('page-title', 'submenu title', 'manage_options', 'upload.php');
+ add_pages_page('page-title', 'submenu title', 'manage_options', 'upload.php');
+ add_comments_page('page-title', 'submenu title', 'manage_options', 'upload.php');
+ add_theme_page('page-title', 'submenu title', 'manage_options', 'upload.php');
+ add_plugins_page('page-title', 'submenu title', 'manage_options', 'upload.php');
+ add_users_page('page-title', 'submenu title', 'manage_options', 'upload.php');
+ //Tools
+ add_management_page('page-title', 'submenu title', 'manage_options', 'upload.php');
+ //Settings
+ add_options_page('page-title', 'submenu title', 'manage_options', 'upload.php'); 
+}
+add_action( 'admin_init', 'add_submenu_item' );
