@@ -2,6 +2,9 @@
         .container {
             width: 1007px;
         }
+        .left .menu .panel-body .nav-left>li>a {
+            padding: 2px 0 2px 5px !important;
+        }
         .page-content {
             .main {
                 .left {
@@ -12,7 +15,6 @@
                             .menu-agency {
                                 li {
                                     padding: 0px 0px 0px 3px;
-                                    ;
                                 }
                             }
                         }
@@ -22,7 +24,7 @@
                     .video {
                         .widget {
                             a {
-                                margin-bottom: 16px;
+                                margin-bottom: 14px;
                             }
                         }
                     }

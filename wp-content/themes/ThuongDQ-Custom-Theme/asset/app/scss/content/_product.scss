@@ -16,7 +16,7 @@
             &>a {
                 &:first-child {
                     float: left;
-                    display: block;
+                    display: inline-table;
                     img {
                         width: 100%;
                         border: 1px solid #a0bcf5 !important;

@@ -46,14 +46,14 @@ function remove_admin_menus() {
     
     
     // hidden
-    // remove_menu_page( 'edit-comments.php' ); // Comments
+    remove_menu_page( 'edit-comments.php' ); // Comments
     // remove_menu_page( 'themes.php' ); // Appearance
-    // remove_menu_page( 'plugins.php' ); // Plugins
-    // remove_menu_page( 'tools.php' ); // Tools
-    // remove_menu_page( 'options-general.php' ); // Settings
-    // remove_menu_page( 'edit.php?post_type=acf' ); //Custom Filed
-    // remove_menu_page( 'duplicator-pro' ); //duplicator-pro
-    // remove_menu_page( 'wphpuw' ); //hide error report
+    remove_menu_page( 'plugins.php' ); // Plugins
+    remove_menu_page( 'tools.php' ); // Tools
+    remove_menu_page( 'options-general.php' ); // Settings
+    remove_menu_page( 'edit.php?post_type=acf' ); //Custom Filed
+    remove_menu_page( 'duplicator-pro' ); //duplicator-pro
+    remove_menu_page( 'wphpuw' ); //hide error report
 }
 add_action( 'admin_menu', 'remove_admin_menus', 999 );
 
@@ -114,22 +114,3 @@ add_filter( 'update_footer', 'change_footer_version', 9999);
 // }
 // add_action( 'admin_menu', 'my_footer_shh' );
 
-
-function add_submenu_item() { 
- // Resource page: http://clivern.com/adding-menus-and-submenus-for-wordpress-plugins/
- // add_options_page($page_title, $menu_title, $capability, $menu_slug, $function);
- 
- add_dashboard_page('page-title', 'submenu title', 'manage_options', 'upload.php');
- add_posts_page('page-title', 'submenu title', 'manage_options', 'upload.php');
- add_media_page('page-title', 'submenu title', 'manage_options', 'upload.php');
- add_pages_page('page-title', 'submenu title', 'manage_options', 'upload.php');
- add_comments_page('page-title', 'submenu title', 'manage_options', 'upload.php');
- add_theme_page('page-title', 'submenu title', 'manage_options', 'upload.php');
- add_plugins_page('page-title', 'submenu title', 'manage_options', 'upload.php');
- add_users_page('page-title', 'submenu title', 'manage_options', 'upload.php');
- //Tools
- add_management_page('page-title', 'submenu title', 'manage_options', 'upload.php');
- //Settings
- add_options_page('page-title', 'submenu title', 'manage_options', 'upload.php'); 
-}
-add_action( 'admin_init', 'add_submenu_item' );

@@ -14,6 +14,10 @@ a {
     }
 }
 
+img {
+    object-fit: cover;
+}
+
 $url_icon:"../img/icon.png";
 @mixin box($border, $border-radius, $padding) {
     border: $border;
@@ -195,6 +199,7 @@ $url_icon:"../img/icon.png";
                     line-height: 26px;
                     display: block;
                     padding: 0px 0px 0px 30%;
+                    color: #000;
                 }
             }
         }

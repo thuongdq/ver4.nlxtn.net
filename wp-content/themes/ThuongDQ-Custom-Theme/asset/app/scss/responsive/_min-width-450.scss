@@ -5,17 +5,19 @@
                 .item {
                     &>a {
                         &:first-child {
-                            width: 30%;
+                            display: inline-table;
+                            width: 163px;
+                            height: 102px;
                         }
                         &:nth-child(2) {
                             margin-left: 10px !important;
-                            width: calc(70% - 10px);
+                            width: calc(100% - 173px);
                         }
                     }
                     .desc {
                         float: left;
                         margin-left: 10px;
-                        width: calc(70% - 10px);
+                        width: calc(100% - 173px);
                     }
                 }
             }

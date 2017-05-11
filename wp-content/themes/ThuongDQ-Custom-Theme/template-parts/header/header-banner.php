@@ -11,13 +11,19 @@
     
     ?>
     <div class="logo">
+        <?php
+        if(is_single()){
+        ?>
+        <a href="<?php echo home_url('/'); ?>" title="Nấm">
+            <img src="<?php echo $logo; ?>" alt="Nấm lim xanh" class="img-reponsive">
+        </a>    
+        <?php }else{ ?>
         <h1>
             <a href="<?php echo home_url('/'); ?>" title="Nấm">
-                <h1>
-                    <img src="<?php echo $logo; ?>" alt="Nấm lim xanh" class="img-reponsive">
-                </h1>
-            </a>
+                <img src="<?php echo $logo; ?>" alt="Nấm lim xanh" class="img-reponsive">
+            </a> 
         </h1>
+        <?php } ?>
     </div>
     <div class="banner">
         <a href="<?php echo home_url('/'); ?>" title="banner">
